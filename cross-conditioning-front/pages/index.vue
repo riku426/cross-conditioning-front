@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <p>test</p>
-    <Tutorial />
+  <div class="content">
+    <div class="header">
+      <Header />
+    </div>
+    <div class="title">
+      <TopPage />
+    </div>
   </div>
 </template>
 
@@ -12,7 +16,12 @@ export default {
 </script>
 
 <style lang="scss">
-p {
-  color: red;
+.content {
+  width: 100%;
+  background-color: white;
+  .header {
+    text-align: right;
+    margin-right: 10px;;
+  }
 }
 </style>
