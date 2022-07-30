@@ -18,23 +18,66 @@
     </div>
     <div class="wrap">
       <h3>コース紹介</h3>
+      <swiper :options="swiperOption" class="swiper">
+        <swiper-slide
+          ><p>ストレッチ</p>
+          <img src="@/img/test.jpeg" alt="" class="img" />
+          <p class="course-detail">
+            ストレッチに特化した施術を行い柔軟性と身体の強化を行います
+          </p></swiper-slide
+        >
+        <swiper-slide
+          ><p>コンディショニング</p>
+          <img src="@/img/test.jpeg" alt="" class="img" />
+          <p>
+            コンディショニングを通してあなたの体の悩みを解決します
+          </p></swiper-slide
+        >
+        <swiper-slide
+          ><p>コンディショニング</p>
+          <img src="@/img/test.jpeg" alt="" class="img" />
+          <p>
+            コンディショニングを通してあなたの体の悩みを解決します
+          </p></swiper-slide
+        >
+        <!-- 追加ここから -->
+        <div slot="pagination" class="swiper-pagination"></div>
+        <div slot="button-prev" class="swiper-button-prev"></div>
+        <div slot="button-next" class="swiper-button-next"></div>
+        <!-- ここまで -->
+      </swiper>
     </div>
-    <swiper :options="swiperOption" class="swiper">
-      <swiper-slide
-        ><img src="@/img/test.jpeg" alt="" class="img"
-      /><p class="course-detail">ストレッチに特化した施術を行い柔軟性と身体の強化を行います</p></swiper-slide>
-      <swiper-slide
-        ><img src="@/img/test.jpeg" alt="" class="img"
-      /></swiper-slide>
-      <swiper-slide
-        ><img src="@/img/test.jpeg" alt="" class="img"
-      /></swiper-slide>
-      <!-- 追加ここから -->
-      <div slot="pagination" class="swiper-pagination"></div>
-      <div slot="button-prev" class="swiper-button-prev"></div>
-      <div slot="button-next" class="swiper-button-next"></div>
-      <!-- ここまで -->
-    </swiper>
+    <div class="wrap-2">
+      <h3>こんな人におすすめ</h3>
+      <div class="recomend-icon">
+        <div>
+          <img src="@/img/waist.jpeg" alt="" class="icon" />
+          <p class="icon-detail">腰痛</p>
+        </div>
+        <div>
+          <img src="@/img/leg.jpeg" alt="" class="icon" />
+          <p class="icon-detail">膝痛</p>
+        </div>
+        <div>
+          <img src="@/img/shoulder.jpeg" alt="" class="icon" />
+          <p class="icon-detail">肩こり</p>
+        </div>
+      </div>
+      <div class="recomend-icon">
+        <div>
+          <img src="@/img/suffer.jpeg" alt="" class="icon" />
+          <p class="icon-detail">だるさ</p>
+        </div>
+        <div>
+          <img src="@/img/suffer.jpeg" alt="" class="icon" />
+          <p class="icon-detail">疲労軽減</p>
+        </div>
+        <div>
+          <img src="@/img/suffer.jpeg" alt="" class="icon" />
+          <p class="icon-detail">メンテナンス</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -137,6 +180,36 @@ export default {
       }
     }
   }
+  .wrap-2 {
+    margin-top: 50px;
+    padding: 50px 10px 0 10px;
+    text-align: left;
+    background: linear-gradient(-135deg, #42f3be, #4380f3) fixed;
+    h3 {
+      margin: 0 0 20px 20px;
+    }
+    .recomend-icon {
+      width: 100%;
+      display: flex;
+      text-align: center;
+      margin: auto;
+      justify-content: space-between;
+      .icon {
+        width: 65px;
+        height: auto;
+        margin: auto;
+      }
+      .icon-detail {
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        background-color: rgb(7, 179, 195);
+        border-radius: 100vh;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
   .swiper {
     width: 75%;
   }
@@ -146,7 +219,7 @@ export default {
   }
 }
 .swiper-container {
-  height: 250px;
+  height: 300px;
   width: 100%;
 }
 .swiper-slide {
@@ -162,7 +235,7 @@ export default {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-left:5px solid #fff;
+  border-left: 5px solid #fff;
   .course-detail {
     padding-right: 10px;
   }
