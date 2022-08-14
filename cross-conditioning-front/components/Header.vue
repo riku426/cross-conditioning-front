@@ -2,17 +2,17 @@
   <div class="header-container">
     <div class="header-title">cross conditioning</div>
     <div class="header-menu">
-      <el-dropdown>
+      <el-dropdown @command="handleCommand">
         <span class="el-dropdown-link">
           <font-awesome-icon icon="bars" /><i
             class="el-icon-arrow-down el-icon--right"
           ></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>ホーム</el-dropdown-item>
-          <el-dropdown-item>コース一覧</el-dropdown-item>
-          <el-dropdown-item>料金</el-dropdown-item>
-          <el-dropdown-item>アクセス</el-dropdown-item>
+          <el-dropdown-item command="">ホーム</el-dropdown-item>
+          <el-dropdown-item command="course">コース一覧</el-dropdown-item>
+          <el-dropdown-item command="access">アクセス</el-dropdown-item>
+          <el-dropdown-item command="contact">お問い合わせ</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -22,6 +22,11 @@
 <script>
 export default {
   name: "IndexPage",
+  methods: {
+    handleCommand(command) {
+      this.$router.push('/' + command)
+    }
+  }
 };
 </script>
 
