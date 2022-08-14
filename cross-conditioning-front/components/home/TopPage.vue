@@ -88,7 +88,7 @@ export default {
     return {
       swiperOption: {
         autoplay: {
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         },
         slidesPerView: 1.2,
@@ -211,7 +211,7 @@ export default {
     }
   }
   .swiper {
-    width: 75%;
+    width: 100%;
   }
   .img {
     width: 100%;
@@ -223,6 +223,7 @@ export default {
   width: 100%;
 }
 .swiper-slide {
+  width: 100px;
   text-align: center;
   font-size: 13px;
   font-weight: 700;
