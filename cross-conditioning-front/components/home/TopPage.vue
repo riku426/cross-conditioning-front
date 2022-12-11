@@ -16,6 +16,14 @@
         <h2 class="comp-name">CROSS CONDITIONING</h2>
       </div>
     </div>
+    <div class="worry_example">
+      <h3>こんな悩みありませんか？</h3>
+      <ul>
+        <li>最近運動不足で体が重い</li>
+        <li>食事制限しているけど痩せられない</li>
+        <li>筋力トレーニングが続けられない</li>
+      </ul>
+    </div>
     <div class="wrap">
       <h3>コース紹介</h3>
       <swiper :options="swiperOption" class="swiper">
@@ -132,8 +140,6 @@ export default {
     margin: auto;
     color: #474747;
     background: whitesmoke; /*背景色*/
-    border-left: double 7px #4ec4d3; /*左線*/
-    border-right: double 7px #4ec4d3; /*右線*/
     position: relative;
     z-index: 1;
     width: auto;
@@ -216,6 +222,9 @@ export default {
   .img {
     width: 100%;
     height: auto;
+  }
+  .worry_example {
+    text-align: left;
   }
 }
 .swiper-container {
