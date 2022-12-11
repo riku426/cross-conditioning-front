@@ -28,7 +28,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/element-ui',
-    { src: '@/plugins/vue-awesome-swiper.js', ssr: false }
+    { src: '@/plugins/vue-awesome-swiper.js', ssr: false },
+    { src: '~/plugins/vue2-google-maps.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,6 +54,9 @@ export default {
     vendor: [
       'vue-awesome-swiper',
     ],
+    extend(config, ctx) {},
+    vendor: ['vue2-google-maps'],
+    transpile: [/^vue2-google-maps($|\/)/],
   },
 
   // アイコン
