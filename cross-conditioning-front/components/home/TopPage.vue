@@ -2,29 +2,75 @@
   <div class="container">
     <div class="title">
       <div>
+        <img src="@/img/logo_2.jpg" alt="" class="title-logo">
         <h2 class="big-sub">圧倒的な変化と感動を。</h2>
       </div>
       <div>
         <h3>
-          <span class="marker">ストレッチ</span><br />と<br /><span
+          <span class="marker">ストレッチ</span><br />✖️<br /><span
             class="marker"
             >コンディショニングトレーニング</span
-          ><br />で身体の悩みを解決します！
+          ><br /><br />で身体の悩みを解決します！
         </h3>
       </div>
       <div>
-        <h2 class="comp-name">CROSS CONDITIONING</h2>
+        <h2 class="comp-name">Cross Condition</h2>
+      </div>
+      <div class="display-circle">
+        <div class="circle">
+          <p class="circle-inner">いつでも解約OK!</p>
+        </div>
+        <div class="circle">
+          <p class="circle-inner">24時間予約OK!</p>
+        </div>
+        <div class="circle">
+          <p class="circle-inner">シューズ無料レンタル</p>
+        </div>
       </div>
     </div>
-    <div class="worry_example">
-      <h3>こんな悩みありませんか？</h3>
-      <ul>
-        <li>最近運動不足で体が重い</li>
-        <li>食事制限しているけど痩せられない</li>
-        <li>筋力トレーニングが続けられない</li>
-      </ul>
+    <div class="sample_box12">
+      <div class="sample_box12_tape"> </div>
+      <p class="sample_box12_title">OPEN記念キャンペーン</p>
+      <p>ストレッチor体幹トレーニングor両方選べる</p>
+      <div class="price">
+        <div class="price-element-1">初回価格60分<br />7500円</div>
+        <p class="price-arrow">→</p>
+        <div class="price-element-2">特別価格60分<br />3500円</div>
+      </div>
     </div>
     <div class="wrap">
+      <h3>こんな悩みありませんか？</h3>
+      <ul class="worry-example">
+        <font-awesome-icon
+          icon="person-circle-check"
+          class="example-icon"
+        />最近運動不足で体が重い<br />
+        <font-awesome-icon
+          icon="person-circle-check"
+          class="example-icon"
+        />食事制限しているけど痩せられない<br />
+        <font-awesome-icon
+          icon="person-circle-check"
+          class="example-icon"
+        />筋力トレーニングが続けられない
+      </ul>
+      <div class="worry-solution">
+        <div class="solution-name">
+          ストレッチ
+        </div>
+        <img src="@/img/stretch.jpeg" alt="" class="solution-img">
+        <p class="solution-detail">ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。</p>
+      </div>
+      <div class="plus">➕</div>
+      <div class="worry-solution">
+        <div class="solution-name">
+          コンディショニング
+        </div>
+        <img src="@/img/conditioning.jpeg" alt="" class="solution-img">
+        <p class="solution-detail">ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。</p>
+      </div>
+    </div>
+    <div class="wrap-2">
       <h3>コース紹介</h3>
       <swiper :options="swiperOption" class="swiper">
         <swiper-slide
@@ -56,6 +102,33 @@
       </swiper>
     </div>
     <div class="wrap-2">
+      <h3>講師紹介</h3>
+      <div class="teacher-container-1">
+        <div class="teacher">
+          <p>廣田朋哉</p>
+          <img src="@/img/player_1.jpeg" alt="" class="player-1" />
+        </div>
+        <div class="teacher">
+          <p>岩本陸</p>
+          <img src="@/img/player_1.jpeg" alt="" class="player-2" />
+        </div>
+      </div>
+      <div class="teacher-container">
+        <div class="teacher">
+          <p>廣田朋哉</p>
+          <img src="@/img/player_1.jpeg" alt="" class="player" />
+        </div>
+        <div class="teacher">
+          <p>廣田朋哉</p>
+          <img src="@/img/player_1.jpeg" alt="" class="player" />
+        </div>
+        <div class="teacher">
+          <p>廣田朋哉</p>
+          <img src="@/img/player_1.jpeg" alt="" class="player" />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="wrap-2">
       <h3>こんな人におすすめ</h3>
       <div class="recomend-icon">
         <div>
@@ -85,7 +158,7 @@
           <p class="icon-detail">メンテナンス</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -128,103 +201,263 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Kosugi');
 .container {
-  margin: auto;
-  width: 100%;
-  margin-top: 20px;
   text-align: center;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   font-weight: 300;
+  background-color: #f3e8d7;
+  color: #0c3b48;
   .title {
     padding: 0.5em 1em;
-    margin: auto;
-    color: #474747;
-    background: whitesmoke; /*背景色*/
-    position: relative;
+    background: #f3e8d7; /*背景色*/
     z-index: 1;
+    text-align: left;
     width: auto;
-    height: 300px;
-    background-image: url("@/img/test_2.jpeg");
+    height: 550px;
+    background-image: url("@/img/top_page_2.png");
     background-position: center;
     background-size: cover;
-    text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: lighten;
-
+    .title-logo {
+      margin-top: 50px;
+      width: 47%;
+    }
+    .display-circle {
+      padding-top: 10px;
+      display: flex;
+      font-size: 12px;
+      .circle {
+        position: relative; /* ←文字の親要素に指定 */
+        padding-bottom: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: #f8f3ea;
+        border-radius: 50%;
+        margin: 0 auto;
+        text-align: center;
+        border: solid 1px #0c3b48;
+        box-shadow: 0 10px 25px 0 rgba(96, 194, 162, .5);
+      }
+      .circle::before {  
+        content: "";
+        width: 93px;
+        height: 100px;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        border: solid #60c2a2 2px;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+      .circle-inner {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    }
     .big-sub {
-      color: black;
+      
       font-weight: 600;
       display: inline-block;
-      background: linear-gradient(transparent 85%, rgb(247, 128, 128) 80%);
+      margin-top: 10px;
+      font-size: 25px;
     }
     h3 {
+      width: 76%;
       font-size: 13px;
+      text-align: center;
     }
     .marker {
-      font-size: 20px;
-      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      color: rgb(255, 94, 0);
     }
     .comp-name {
-      background: linear-gradient(
-        transparent 30%,
-        rgba(247, 198, 104, 0.2) 30%,
-        rgb(248, 248, 247) 65%,
-        rgba(247, 198, 104, 0.2)
-      );
-      color: black;
+      text-align: center;
+      margin: 15px 20px;
       font-weight: bold;
-      font-family: "Noto Sans", sans-serif;
+      font-family: 'Vollkorn', serif;
+      background-color: white;
+      width: auto;
+      color: #60c2a2;
+      font-size: 33px;
+      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+      border-radius: 5px;
     }
+  }
+  .sample_box12 {
+    width: 260px;/* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 3em auto;
+    background-color: #f8f3ea;/* 紙の色 */
+    border: solid #60c2a2 2px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+    word-break: break-all;
+    p {
+      margin: 0; 
+      padding: 0;
+      font-size: 0.8em;
+    }
+  }
+  .sample_box12_tape {
+    width: 50%;
+    height: 35px;
+    margin: -25px auto 0;
+    background: rgba(251, 234, 144, 0.5);/* テープの色 */
+    transform: rotate(-3deg);
+    opacity: 0.9;
+  }
+  .price {
+    display: flex;
+    margin: 20px auto;
+    .price-element-1 {
+      margin: auto;
+    }
+    .price-arrow {
+      padding-top: 20px;
+    }
+    .price-element-2 {
+      margin: auto;
+      color: rgb(255, 94, 0);
+    }
+  }
+  .sample_box12_title {
+    text-align: center;
+    font-size: 1.3em!important;
+    margin-top: 10px!important;
+  }
+  .sample_box12_subtitle {
+    text-align: center;
+    font-size: 0.7em!important;
+    margin-bottom: 1em!important;
   }
   .wrap {
     margin: 50px 0 0 20px;
     text-align: left;
-    .description {
-      .marker {
-        color: red;
-        font-size: 20px;
+    .worry-example {
+      text-align: left;
+      padding: 10px;
+      .example-icon {
+        padding-right: 10px;
       }
+    }
+    .worry-solution {
+      background-color: #60c2a2;
+      padding-top: 5px;
+      margin-right: 5%;
+      .solution-name {
+        background-color: #60c2a2;
+        text-align: center;
+        padding: 10px;
+        margin: 20px;
+        border: solid #f8f3ea 2px;
+        color: #f8f3ea;
+      }
+      .solution-img {
+        padding: 0 20px;
+        width: 85%;
+      }
+      .solution-detail {
+        padding: 15px;
+        color: #f8f3ea;
+        font-size: 13px;
+      }
+    }
+    .plus {
+      text-align: center;
+      font-size: 50px;
     }
   }
   .wrap-2 {
-    margin-top: 50px;
-    padding: 50px 10px 0 10px;
-    text-align: left;
-    background: linear-gradient(-135deg, #42f3be, #4380f3) fixed;
     h3 {
-      margin: 0 0 20px 20px;
+      margin: 50px 0 0 20px;
+      text-align: left;
     }
-    .recomend-icon {
-      width: 100%;
+    .teacher-container-1 {
       display: flex;
-      text-align: center;
-      margin: auto;
-      justify-content: space-between;
-      .icon {
-        width: 65px;
-        height: auto;
+      margin: 0 40px;
+      .teacher {
+        padding: 10px;
         margin: auto;
-      }
-      .icon-detail {
         width: 100px;
-        height: 50px;
-        line-height: 50px;
-        background-color: rgb(7, 179, 195);
-        border-radius: 100vh;
-        color: #fff;
         text-align: center;
+        .player-1 {
+          width: 90%;
+          border-radius: 50px;
+          text-align: right;
+        }
+        .player-2 {
+          width: 90%;
+          border-radius: 50px;
+        }
+        .player {
+          width: 90%;
+          border-radius: 50px;
+        }
+      }
+    }
+    .teacher-container {
+      display: flex;
+      .teacher {
+        padding: 10px;
+        margin: auto;
+        width: 100px;
+        text-align: center;
+        .player-1 {
+          width: 90%;
+          border-radius: 50px;
+          text-align: right;
+        }
+        .player-2 {
+          width: 90%;
+          border-radius: 50px;
+        }
+        .player {
+          width: 90%;
+          border-radius: 50px;
+        }
       }
     }
   }
+  // .wrap-2 {
+  //   margin-top: 50px;
+  //   padding: 50px 10px 0 10px;
+  //   text-align: left;
+  //   background: linear-gradient(-135deg, #42f3be, #4380f3) fixed;
+  //   h3 {
+  //     margin: 0 0 20px 20px;
+  //   }
+  //   .recomend-icon {
+  //     width: 100%;
+  //     display: flex;
+  //     text-align: center;
+  //     margin: auto;
+  //     justify-content: space-between;
+  //     .icon {
+  //       width: 65px;
+  //       height: auto;
+  //       margin: auto;
+  //     }
+  //     .icon-detail {
+  //       width: 100px;
+  //       height: 50px;
+  //       line-height: 50px;
+  //       background-color: rgb(7, 179, 195);
+  //       border-radius: 100vh;
+  //       color: #fff;
+  //       text-align: center;
+  //     }
+  //   }
+  // }
   .swiper {
     width: 100%;
   }
   .img {
     width: 100%;
     height: auto;
-  }
-  .worry_example {
-    text-align: left;
   }
 }
 .swiper-container {
@@ -236,7 +469,7 @@ export default {
   text-align: center;
   font-size: 13px;
   font-weight: 700;
-  background-color: #eee;
+  background-color: rgb(248, 241, 235);
   display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-pack: center;
@@ -245,7 +478,7 @@ export default {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-left: 5px solid #fff;
+  border-left: 5px solid rgb(255, 255, 255);
   .course-detail {
     padding-right: 10px;
   }

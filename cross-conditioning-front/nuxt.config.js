@@ -16,7 +16,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,100;1,600&display=swap'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,100;1,600&display=swap' },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Vollkorn" },
     ]
   },
 
@@ -54,7 +55,7 @@ export default {
     vendor: [
       'vue-awesome-swiper',
     ],
-    extend(config, ctx) {},
+    extend(config, ctx) { },
     vendor: ['vue2-google-maps'],
     transpile: [/^vue2-google-maps($|\/)/],
   },

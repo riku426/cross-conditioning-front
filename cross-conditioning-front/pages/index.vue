@@ -18,10 +18,17 @@ export default {
 <style lang="scss">
 .content {
   width: 100%;
-  background-color: white;
+  background-color: #f3e8d7;
   .header {
+    width: 100%;
     text-align: right;
-    margin-right: 10px;;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .title {
+    width: 100%;
   }
 }
 </style>
