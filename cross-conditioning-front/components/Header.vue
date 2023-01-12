@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <div class="header-title">cross conditioning</div>
+    <div class="header-title"><img src="@/img/logo_2.jpg" class="logo">cross conditioning</div>
     <div class="header-menu">
       <el-dropdown @command="handleCommand">
         <span class="el-dropdown-link">
@@ -24,21 +24,27 @@ export default {
   name: "IndexPage",
   methods: {
     handleCommand(command) {
-      this.$router.push('/' + command)
-    }
-  }
+      this.$router.push("/" + command);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .header-container {
   justify-content: space-between;
-  width: 100%;
   display: flex;
+  background-color: #f3e8d7;
+  border: black 1px solid;
   .header-title {
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 0;
     font-family: "Noto Sans", sans-serif;
     font-weight: 800;
+    height: 40px;
+    display: flex;
+    .logo {
+      height: 100%;
+    }
   }
   .header-menu {
     margin: 10px 0 0 10px;
