@@ -41,18 +41,18 @@
     <div class="wrap">
       <h3>こんな悩みありませんか？</h3>
       <ul class="worry-example">
-        <font-awesome-icon
-          icon="person-circle-check"
-          class="example-icon"
-        />最近運動不足で体が重い<br />
-        <font-awesome-icon
-          icon="person-circle-check"
-          class="example-icon"
-        />食事制限しているけど痩せられない<br />
-        <font-awesome-icon
-          icon="person-circle-check"
-          class="example-icon"
-        />筋力トレーニングが続けられない
+        <div class="worry-element">
+          <img src="@/img/check.png" alt="" class="worry-check">
+          <p>最近運動不足で体が重い</p>
+        </div>
+        <div class="worry-element">
+          <img src="@/img/check.png" alt="" class="worry-check">
+          <p>食事制限しているけど痩せられない</p>
+        </div>
+        <div class="worry-element">
+          <img src="@/img/check.png" alt="" class="worry-check">
+          <p>筋力トレーニングが続けられない</p>
+        </div>
       </ul>
       <div class="worry-solution">
         <div class="solution-name">ストレッチ</div>
@@ -337,10 +337,16 @@ export default {
     .worry-example {
       text-align: left;
       padding: 10px;
-      height: 80px;
-      .example-icon {
-        font-size: 20px;
-        padding-right: 10px;
+      .worry-element {
+        height: 25px;
+        display: flex;
+        .worry-check {
+          padding-right: 5px;
+          height: 100%;
+        }
+        p {
+          margin: 5px;
+        }
       }
     }
     .worry-solution {

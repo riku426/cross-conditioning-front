@@ -1,4 +1,3 @@
-import * as FontAwesome from '@fortawesome/free-solid-svg-icons'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -70,10 +69,5 @@ export default {
         icons: ['fas'],
       },
     ],
-    icons: {
-      solid: FontAwesome.solid,
-      regular: FontAwesome.regular,
-      brands: FontAwesome.brands
-    }
   },
 }

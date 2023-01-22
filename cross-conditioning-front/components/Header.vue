@@ -4,9 +4,7 @@
     <div class="header-menu">
       <el-dropdown @command="handleCommand">
         <span class="el-dropdown-link">
-          <font-awesome-icon icon="bars" /><i
-            class="el-icon-arrow-down el-icon--right"
-          ></i>
+          <img src="@/img/menu.png" alt="" class="menu">
         </span>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="">ホーム</el-dropdown-item>
@@ -49,6 +47,9 @@ export default {
   .header-menu {
     margin: 10px 0 0 10px;
     .el-dropdown-link {
+      .menu {
+        height: 30px;
+      }
       cursor: pointer;
       color: gray;
       font-size: 20px;
