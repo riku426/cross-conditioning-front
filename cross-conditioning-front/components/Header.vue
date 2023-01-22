@@ -1,6 +1,6 @@
 <template>
   <div class="header-container">
-    <div class="header-title"><img src="@/img/logo_2.jpg" class="logo">cross conditioning</div>
+    <div class="header-title"><img src="@/img/logo_2.jpg" class="logo">Cross Condition</div>
     <div class="header-menu">
       <el-dropdown @command="handleCommand">
         <span class="el-dropdown-link">
@@ -37,7 +37,7 @@ export default {
   background-color: #f3e8d7;
   border: black 1px solid;
   .header-title {
-    margin: 10px 0 0 0;
+    margin: 13px 0 0 0;
     font-family: "Noto Sans", sans-serif;
     font-weight: 800;
     height: 40px;
