@@ -3,7 +3,7 @@
     <div class="title">
       <div>
         <img src="@/img/logo_2.jpg" alt="" class="title-logo" />
-        <h2 class="big-sub">{{catchCopy}}</h2>
+        <h2 class="big-sub">{{ catchCopy }}</h2>
       </div>
       <div>
         <h3>
@@ -14,17 +14,17 @@
         </h3>
       </div>
       <div>
-        <h2 class="comp-name">{{companyName}}</h2>
+        <h2 class="comp-name">{{ companyName }}</h2>
       </div>
       <div class="display-circle">
-        <div class="circle" v-for="item in circleItems" :key="item.name ">
-          <p class="circle-inner">{{item.name}}</p>
+        <div class="circle" v-for="item in circleItems" :key="item.name">
+          <p class="circle-inner">{{ item.name }}</p>
         </div>
       </div>
     </div>
     <div class="sample_box12">
       <div class="sample_box12_tape"></div>
-      <p class="sample_box12_title">{{news}}</p>
+      <p class="sample_box12_title">{{ news }}</p>
       <p>ストレッチor体幹トレーニングor両方選べる</p>
       <div class="price">
         <div class="price-element-1">初回価格60分<br />7500円</div>
@@ -36,15 +36,15 @@
       <h3>こんな悩みありませんか？</h3>
       <ul class="worry-example">
         <div class="worry-element" v-for="item in worryItems" :key="item.id">
-          <img src="@/img/check.png" alt="" class="worry-check">
-          <p>{{item.name}}</p>
+          <img src="@/img/check.png" alt="" class="worry-check" />
+          <p>{{ item.name }}</p>
         </div>
       </ul>
       <div v-for="item in solutionItems" :key="item.id" class="worry-solution">
-        <div class="solution-name">{{item.name}}</div>
+        <div class="solution-name">{{ item.name }}</div>
         <img :src="item.img" alt="" class="solution-img" />
         <p class="solution-detail">
-          {{item.discription}}
+          {{ item.discription }}
         </p>
       </div>
     </div>
@@ -54,14 +54,16 @@
         <p class="player-discription">廣田智哉</p>
         <img src="@/img/player_1.jpeg" alt="" class="player" />
         <div class="discription">
-          {{ceoStatement}}
+          {{ ceoStatement }}
         </div>
       </div>
     </div>
     <div class="wrap-2">
       <h3>料金表</h3>
       <table class="table-1">
-       <caption class="course">基本コース</caption>
+        <caption class="course">
+          基本コース
+        </caption>
         <tr class="tr-element">
           <th>40分</th>
           <th class="popular">
@@ -78,7 +80,9 @@
         </tr>
       </table>
       <table class="table-1">
-       <caption class="course">３回券</caption>
+        <caption class="course">
+          ３回券
+        </caption>
         <tr class="tr-element">
           <th>40分</th>
           <th class="not-no1">60分</th>
@@ -86,10 +90,12 @@
           <th>100分</th>
         </tr>
         <tr class="tr-head">
-          <td v-for="item in threeTickets" :key="item.id">{{item.name}}</td>
+          <td v-for="item in threeTickets" :key="item.id">{{ item.name }}</td>
         </tr>
         <tr>
-          <td v-for="item in threeTickets" :key="item.id" class="sale">{{item.sale}}</td>
+          <td v-for="item in threeTickets" :key="item.id" class="sale">
+            {{ item.sale }}
+          </td>
         </tr>
       </table>
     </div>
@@ -107,65 +113,68 @@ export default {
   name: "toppage",
   data() {
     return {
-      catchCopy: '圧倒的な変化と感動を。',
-      companyName: 'Cross Condition',
+      catchCopy: "圧倒的な変化と感動を。",
+      companyName: "Cross Condition",
       circleItems: [
-        {name: '手ぶらOK'},
-        {name: '服貸し出し無料'},
-        {name: '無料カウンセリング'}
+        { name: "手ぶらOK" },
+        { name: "服貸し出し無料" },
+        { name: "無料カウンセリング" },
       ],
       news: "OPEN記念キャンペーン",
       worryItems: [
         {
           id: 1,
-          name: '最近運動不足で体が重い',
+          name: "肩こり腰痛がひどい",
         },
         {
           id: 2,
-          name: '食事制限しているけど痩せられない',
+          name: "姿勢を良くしたい",
         },
         {
           id: 3,
-          name: '筋力トレーニングが続けられない',
+          name: "運動不足を解消したい",
         },
       ],
-      ceoStatement: 'はじめまして！Cross Conditionの代表取締役の廣田です！CrossConditionでは、ストレッチを中心として体を整える施術をおこなっています！運動が苦手な方、運動が続かない方でも楽しくトレーニングを続けられます。',
+      ceoStatement:
+        "こんにちは、代表の廣田です。運動しにくい環境で腰痛や肩こりに悩まされている方が多いと思います。ストレッチと体幹トレーニングで一緒に日常生活の辛さを、一緒に変えていきましょう！",
       threeTickets: [
         {
           id: 1,
-          name: '¥5,000',
-          sale: '¥4,500お得',
+          name: "¥5,000",
+          sale: "¥4,500お得",
         },
         {
           id: 2,
-          name: '¥18,000',
-          sale: '¥4,500お得',
+          name: "¥18,000",
+          sale: "¥4,500お得",
         },
         {
           id: 3,
-          name: '¥24,000',
-          sale: '¥6,000お得',
+          name: "¥24,000",
+          sale: "¥6,000お得",
         },
         {
           id: 4,
-          name: '¥30,500',
-          sale: '¥7,500お得',
+          name: "¥30,500",
+          sale: "¥7,500お得",
         },
       ],
       solutionItems: [
         {
           id: 1,
-          name: 'ストレッチ',
-          img: require('@/img/stretch.jpeg'),
-          discription: 'ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。',
+          name: "ストレッチ",
+          img: require("@/img/stretch.jpeg"),
+          discription:
+            "ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。",
         },
         {
           id: 2,
-          name: 'コンディショニング',
-          img: require('@/img/conditioning.jpeg'),
-          discription: 'ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。'
-        }
-      ]
+          name: "コンディショニング",
+          img: require("@/img/conditioning.jpeg"),
+          discription:
+            "ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。",
+        },
+      ],
     };
   },
   methods: {
@@ -528,5 +537,36 @@ export default {
 }
 .swiper-button-prev {
   left: 0;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    .title {
+      height: 1200px;
+      .title-logo {
+        width: 40%;
+      }
+      .big-sub {
+        display: block;
+        margin-left: 200px;
+        font-size: 50px;
+      }
+      h3 {
+        width: 50%;
+        font-size: 30px;
+        text-align: center;
+      }
+      .marker {
+        font-size: 35px;
+        font-weight: 600;
+        color: rgb(255, 94, 0);
+      }
+      .comp-name {
+        font-size: 50px;
+        width: 30%;
+        margin: 50px 150px;
+      }
+    }
+  }
 }
 </style>
