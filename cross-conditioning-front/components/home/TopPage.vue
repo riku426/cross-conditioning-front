@@ -2,7 +2,7 @@
   <div class="container">
     <div class="title">
       <div>
-        <img src="@/img/logo_2.jpg" alt="" class="title-logo">
+        <img src="@/img/logo_2.jpg" alt="" class="title-logo" />
         <h2 class="big-sub">圧倒的な変化と感動を。</h2>
       </div>
       <div>
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="sample_box12">
-      <div class="sample_box12_tape"> </div>
+      <div class="sample_box12_tape"></div>
       <p class="sample_box12_title">OPEN記念キャンペーン</p>
       <p>ストレッチor体幹トレーニングor両方選べる</p>
       <div class="price">
@@ -55,23 +55,73 @@
         />筋力トレーニングが続けられない
       </ul>
       <div class="worry-solution">
-        <div class="solution-name">
-          ストレッチ
-        </div>
-        <img src="@/img/stretch.jpeg" alt="" class="solution-img">
-        <p class="solution-detail">ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。</p>
+        <div class="solution-name">ストレッチ</div>
+        <img src="@/img/stretch.jpeg" alt="" class="solution-img" />
+        <p class="solution-detail">
+          ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。
+        </p>
       </div>
       <div class="plus">➕</div>
       <div class="worry-solution">
-        <div class="solution-name">
-          コンディショニング
-        </div>
-        <img src="@/img/conditioning.jpeg" alt="" class="solution-img">
-        <p class="solution-detail">ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。</p>
+        <div class="solution-name">コンディショニング</div>
+        <img src="@/img/conditioning.jpeg" alt="" class="solution-img" />
+        <p class="solution-detail">
+          ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。
+        </p>
       </div>
     </div>
     <div class="wrap-2">
-      <h3>コース紹介</h3>
+      <h3>代表挨拶</h3>
+      <div class="player-container">
+        <p class="player-discription">廣田智哉</p>
+        <img src="@/img/player_1.jpeg" alt="" class="player" />
+        <div class="discription">
+          はじめまして！Cross Conditionの代表取締役の廣田です！Cross
+          Conditionでは、ストレッチを中心として体を整える施術をおこなっています！運動が苦手な方、運動が続かない方でも楽しくトレーニングを続けられます。
+        </div>
+      </div>
+    </div>
+    <div class="wrap-2">
+      <h3>料金表</h3>
+      <table class="table-1">
+       <caption class="course">基本コース</caption>
+        <tr class="tr-element">
+          <th>40分</th>
+          <th class="popular">
+            <span class="inner"><span class="no1">人気No.1</span>60分</span>
+          </th>
+          <th>80分</th>
+          <th>100分</th>
+        </tr>
+        <tr class="tr-head">
+          <td>¥5,000</td>
+          <td class="popular">¥7,500</td>
+          <td>¥10,000</td>
+          <td>¥12,500</td>
+        </tr>
+      </table>
+      <table class="table-1">
+       <caption class="course">３回券</caption>
+        <tr class="tr-element">
+          <th>40分</th>
+          <th class="not-no1">60分</th>
+          <th>80分</th>
+          <th>100分</th>
+        </tr>
+        <tr class="tr-head">
+          <td>¥5,000</td>
+          <td class="popular">¥18,000</td>
+          <td>¥24,000</td>
+          <td>¥30,500</td>
+        </tr>
+        <tr>
+          <td class="sale">¥4,500お得</td>
+          <td class="sale">¥4,500お得</td>
+          <td class="sale">¥6,000お得</td>
+          <td class="sale">¥7,500お得</td>
+        </tr>
+      </table>
+      <!-- <h3>コース紹介</h3>
       <swiper :options="swiperOption" class="swiper">
         <swiper-slide
           ><p>ストレッチ</p>
@@ -94,71 +144,17 @@
             コンディショニングを通してあなたの体の悩みを解決します
           </p></swiper-slide
         >
-        <!-- 追加ここから -->
         <div slot="pagination" class="swiper-pagination"></div>
         <div slot="button-prev" class="swiper-button-prev"></div>
         <div slot="button-next" class="swiper-button-next"></div>
-        <!-- ここまで -->
-      </swiper>
+      </swiper> -->
     </div>
     <div class="wrap-2">
-      <h3>講師紹介</h3>
-      <div class="teacher-container-1">
-        <div class="teacher">
-          <p>廣田朋哉</p>
-          <img src="@/img/player_1.jpeg" alt="" class="player-1" />
-        </div>
-        <div class="teacher">
-          <p>岩本陸</p>
-          <img src="@/img/player_1.jpeg" alt="" class="player-2" />
-        </div>
-      </div>
-      <div class="teacher-container">
-        <div class="teacher">
-          <p>廣田朋哉</p>
-          <img src="@/img/player_1.jpeg" alt="" class="player" />
-        </div>
-        <div class="teacher">
-          <p>廣田朋哉</p>
-          <img src="@/img/player_1.jpeg" alt="" class="player" />
-        </div>
-        <div class="teacher">
-          <p>廣田朋哉</p>
-          <img src="@/img/player_1.jpeg" alt="" class="player" />
-        </div>
-      </div>
+      <h3>予約・お問い合わせ</h3>
     </div>
-    <!-- <div class="wrap-2">
-      <h3>こんな人におすすめ</h3>
-      <div class="recomend-icon">
-        <div>
-          <img src="@/img/waist.jpeg" alt="" class="icon" />
-          <p class="icon-detail">腰痛</p>
-        </div>
-        <div>
-          <img src="@/img/leg.jpeg" alt="" class="icon" />
-          <p class="icon-detail">膝痛</p>
-        </div>
-        <div>
-          <img src="@/img/shoulder.jpeg" alt="" class="icon" />
-          <p class="icon-detail">肩こり</p>
-        </div>
-      </div>
-      <div class="recomend-icon">
-        <div>
-          <img src="@/img/suffer.jpeg" alt="" class="icon" />
-          <p class="icon-detail">だるさ</p>
-        </div>
-        <div>
-          <img src="@/img/suffer.jpeg" alt="" class="icon" />
-          <p class="icon-detail">疲労軽減</p>
-        </div>
-        <div>
-          <img src="@/img/suffer.jpeg" alt="" class="icon" />
-          <p class="icon-detail">メンテナンス</p>
-        </div>
-      </div>
-    </div> -->
+    <div class="wrap-2">
+      <h3>アクセス</h3>
+    </div>
   </div>
 </template>
 
@@ -201,7 +197,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Kosugi');
+@import url("https://fonts.googleapis.com/css?family=Kosugi");
 .container {
   text-align: center;
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
@@ -237,9 +233,9 @@ export default {
         margin: 0 auto;
         text-align: center;
         border: solid 1px #0c3b48;
-        box-shadow: 0 10px 25px 0 rgba(96, 194, 162, .5);
+        box-shadow: 0 10px 25px 0 rgba(96, 194, 162, 0.5);
       }
-      .circle::before {  
+      .circle::before {
         content: "";
         width: 93px;
         height: 100px;
@@ -259,7 +255,6 @@ export default {
       }
     }
     .big-sub {
-      
       font-weight: 600;
       display: inline-block;
       margin-top: 10px;
@@ -279,25 +274,26 @@ export default {
       text-align: center;
       margin: 15px 20px;
       font-weight: bold;
-      font-family: 'Vollkorn', serif;
+      font-family: "Vollkorn", serif;
       background-color: white;
       width: auto;
       color: #60c2a2;
       font-size: 33px;
-      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
       border-radius: 5px;
     }
   }
   .sample_box12 {
-    width: 260px;/* 紙の横幅 100%にすると全幅表示に */
+    width: 260px; /* 紙の横幅 100%にすると全幅表示に */
     padding: 15px;
     margin: 3em auto;
-    background-color: #f8f3ea;/* 紙の色 */
+    background-color: #f8f3ea; /* 紙の色 */
     border: solid #60c2a2 2px;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.03);
+    transform: rotate(2deg);
     word-break: break-all;
     p {
-      margin: 0; 
+      margin: 0;
       padding: 0;
       font-size: 0.8em;
     }
@@ -306,7 +302,7 @@ export default {
     width: 50%;
     height: 35px;
     margin: -25px auto 0;
-    background: rgba(251, 234, 144, 0.5);/* テープの色 */
+    background: rgba(251, 234, 144, 0.5); /* テープの色 */
     transform: rotate(-3deg);
     opacity: 0.9;
   }
@@ -326,13 +322,13 @@ export default {
   }
   .sample_box12_title {
     text-align: center;
-    font-size: 1.3em!important;
-    margin-top: 10px!important;
+    font-size: 1.3em !important;
+    margin-top: 10px !important;
   }
   .sample_box12_subtitle {
     text-align: center;
-    font-size: 0.7em!important;
-    margin-bottom: 1em!important;
+    font-size: 0.7em !important;
+    margin-bottom: 1em !important;
   }
   .wrap {
     margin: 50px 0 0 20px;
@@ -376,49 +372,98 @@ export default {
       margin: 50px 0 0 20px;
       text-align: left;
     }
-    .teacher-container-1 {
-      display: flex;
-      margin: 0 40px;
-      .teacher {
-        padding: 10px;
+    .player-container {
+      width: 90%;
+      margin: 0 auto;
+      .player {
+        width: 100%;
+        height: auto;
+      }
+      .player-discription {
+        margin: 20px 0 auto;
+      }
+      .discription {
         margin: auto;
-        width: 100px;
-        text-align: center;
-        .player-1 {
-          width: 90%;
-          border-radius: 50px;
-          text-align: right;
-        }
-        .player-2 {
-          width: 90%;
-          border-radius: 50px;
-        }
-        .player {
-          width: 90%;
-          border-radius: 50px;
-        }
+        width: 90%;
+        background-color: white;
+        border-radius: 10px;
       }
     }
-    .teacher-container {
-      display: flex;
-      .teacher {
-        padding: 10px;
-        margin: auto;
-        width: 100px;
+    .table-1 {
+      background-color: white;
+      margin: 30px auto 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      table-layout: fixed;
+      width: 90%;
+      .course {
+        padding-bottom: 15px;
+        font-size: 20px;
+      }
+      tr:last-child {
+        border-bottom: solid 1px #ddd;
+      }
+      th {
         text-align: center;
-        .player-1 {
-          width: 90%;
-          border-radius: 50px;
-          text-align: right;
-        }
-        .player-2 {
-          width: 90%;
-          border-radius: 50px;
-        }
-        .player {
-          width: 90%;
-          border-radius: 50px;
-        }
+        padding: 10px 0;
+        border-right: solid 1px #ddd;
+        border-left: solid 1px #ddd;
+        width: 25%;
+      }
+      th:nth-child(1) {
+        background-color: #60c2a2;
+      }
+      th:nth-child(3) {
+        background-color: #60c2a2;
+        color: white;
+      }
+      th:nth-child(4) {
+        background-color: #60c2a2;
+        color: white;
+      }
+      tr:nth-child(2) td {
+        font-size: 20px;
+      }
+      td {
+        text-align: center;
+        padding: 7px 0;
+        border-right: solid 1px #ddd;
+        border-left: solid 1px #ddd;
+        width: 25%;
+      }
+      .popular {
+        width: 25%;
+      }
+      th.popular {
+        position: relative;
+      }
+      th.popular span.no1 {
+        position: absolute;
+        top: -20px;
+        left: calc(50% - 20px);
+        background: #bdcc28;
+        width: 30%;
+        font-size: 10px;
+        border-radius: 15px;
+        line-height: 1;
+        padding: 5px;
+      }
+      th.popular span.inner {
+        position: absolute;
+        color: white;
+        background-color: rgb(255, 94, 0);
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+      }
+      th.not-no1 {
+        background-color: #60c2a2;
+      }
+      td.sale {
+        color: red;
+        font-size: 12px;
       }
     }
   }
