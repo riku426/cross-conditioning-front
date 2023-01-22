@@ -1,3 +1,4 @@
+import * as FontAwesome from '@fortawesome/free-solid-svg-icons'
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -41,6 +42,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    ['@nuxtjs/fontawesome', { component: 'fontAwesome', suffix: true }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -68,5 +70,10 @@ export default {
         icons: ['fas'],
       },
     ],
+    icons: {
+      solid: FontAwesome.solid,
+      regular: FontAwesome.regular,
+      brands: FontAwesome.brands
+    }
   },
 }

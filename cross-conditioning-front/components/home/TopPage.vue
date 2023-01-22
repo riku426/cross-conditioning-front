@@ -198,6 +198,7 @@ export default {
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Kosugi");
+
 .container {
   text-align: center;
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
@@ -336,6 +337,7 @@ export default {
     .worry-example {
       text-align: left;
       padding: 10px;
+      height: 80px;
       .example-icon {
         font-size: 20px;
         padding-right: 10px;
