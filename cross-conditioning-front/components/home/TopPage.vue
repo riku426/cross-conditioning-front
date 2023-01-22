@@ -40,19 +40,31 @@
           <p>{{ item.name }}</p>
         </div>
       </ul>
-      <div v-for="item in solutionItems" :key="item.id" class="worry-solution">
-        <div class="solution-name">{{ item.name }}</div>
-        <img :src="item.img" alt="" class="solution-img" />
-        <p class="solution-detail">
-          {{ item.discription }}
-        </p>
+      <div class="solution-container">
+        <div class="worry-solution">
+          <div class="solution-name">{{ solutionItems[0].name }}</div>
+          <img :src="solutionItems[0].img" alt="" class="solution-img" />
+          <p class="solution-detail">
+            {{ solutionItems[0].discription }}
+          </p>
+        </div>
+        <div class="plus">＋</div>
+        <div class="worry-solution">
+          <div class="solution-name">{{ solutionItems[1].name }}</div>
+          <img :src="solutionItems[1].img" alt="" class="solution-img" />
+          <p class="solution-detail">
+            {{ solutionItems[1].discription }}
+          </p>
+        </div>
       </div>
     </div>
     <div class="wrap-2">
       <h3>代表挨拶</h3>
       <div class="player-container">
-        <p class="player-discription">廣田智哉</p>
-        <img src="@/img/player_1.jpeg" alt="" class="player" />
+        <div>
+          <p class="player-discription">廣田智哉</p>
+          <img src="@/img/player_1.jpeg" alt="" class="player" />
+        </div>
         <div class="discription">
           {{ ceoStatement }}
         </div>
@@ -101,9 +113,28 @@
     </div>
     <div class="wrap-2">
       <h3>予約・お問い合わせ</h3>
+      <div class="offer-container">
+        <div class="offer-method">
+          <h4>電話番号：</h4>
+          <p>080-2470-9958</p>
+        </div>
+        <div class="offer-method">
+          <h4>公式LINE：</h4>
+          <img src="@/img/line.png" alt="" class="line" />
+        </div>
+      </div>
     </div>
     <div class="wrap-2">
       <h3>アクセス</h3>
+      <div class="offer-container">
+        <div class="offer-method">
+          <h4>
+            住所： 〒670-0962<br />
+            兵庫県姫路市南駅前町75イルソーレ南駅前301号室
+          </h4>
+          <h4>最寄駅：姫路駅から徒歩５分</h4>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -348,6 +379,7 @@ export default {
       background-color: #60c2a2;
       padding-top: 5px;
       margin-right: 5%;
+      text-align: center;
       .solution-name {
         background-color: #60c2a2;
         text-align: center;
@@ -361,6 +393,7 @@ export default {
         width: 85%;
       }
       .solution-detail {
+        text-align: left;
         padding: 15px;
         color: #f8f3ea;
         font-size: 13px;
@@ -387,6 +420,8 @@ export default {
         margin: 20px 0 auto;
       }
       .discription {
+        text-align: left;
+        padding: 10px;
         margin: auto;
         width: 90%;
         background-color: white;
@@ -473,6 +508,15 @@ export default {
         font-size: 12px;
       }
     }
+    .offer-container {
+      text-align: left;
+      margin: 0 30px;
+      .offer-method {
+        .line {
+          width: 100%;
+        }
+      }
+    }
   }
   // .wrap-2 {
   //   margin-top: 50px;
@@ -541,6 +585,8 @@ export default {
 
 @media all and (min-width: 768px) {
   .container {
+    margin: 0 50px;
+    font-size: 35px;
     .title {
       height: 1200px;
       .title-logo {
@@ -548,7 +594,7 @@ export default {
       }
       .big-sub {
         display: block;
-        margin-left: 200px;
+        margin-left: 13%;
         font-size: 50px;
       }
       h3 {
@@ -565,6 +611,89 @@ export default {
         font-size: 50px;
         width: 30%;
         margin: 50px 150px;
+      }
+      .display-circle {
+        font-size: 25px;
+        margin-left: 10%;
+        width: 60%;
+        .circle {
+          width: 200px;
+          height: 200px;
+          background-color: #f8f3ea;
+          border-radius: 50%;
+          margin: 0 auto;
+          text-align: center;
+          border: solid 1px #0c3b48;
+          box-shadow: 0 10px 25px 0 rgba(96, 194, 162, 0.5);
+        }
+        .circle::before {
+          content: "";
+          width: 193px;
+          height: 200px;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border: solid #60c2a2 2px;
+          border-radius: 50%;
+          box-sizing: border-box;
+        }
+        .circle-inner {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .sample_box12 {
+      width: 50%;
+    }
+    .wrap {
+      margin-left: 50px;
+      .worry-example {
+        .worry-element {
+          margin: 30px;
+          .worry-check {
+            margin-right: 30px;
+          }
+        }
+      }
+      .solution-container {
+        display: flex;
+        .worry-solution {
+          width: 40%;
+          margin: 0 auto;
+          .solution-detail {
+            font-size: 30px;
+            margin: 30px;
+          }
+        }
+        .plus {
+          width: 10%;
+          font-size: 100px;
+          margin: auto;
+        }
+      }
+    }
+    .wrap-2 {
+      margin-left: 50px;
+      .player-container {
+        display: flex;
+        .player {
+          height: 300px;
+          width: auto;
+        }
+        .discription {
+          width: 70%;
+          margin-top: auto;
+        }
+      }
+      .table-1 {
+        width: 70%;
+        .course {
+          font-size: 30px;
+        }
       }
     }
   }

@@ -35,7 +35,7 @@ export default {
   background-color: #f3e8d7;
   border: black 1px solid;
   .header-title {
-    width: auto;
+    width: 80%;
     margin: 13px 0 0 0;
     font-family: "Noto Sans", sans-serif;
     font-weight: 800;
@@ -64,6 +64,7 @@ export default {
 @media all and (min-width: 768px) {
 .header-container {
   .header-title {
+    width: auto;
     text-align: center;
     font-size: 30px;
     margin: auto;
