@@ -3,7 +3,7 @@
     <div class="title">
       <div>
         <img src="@/img/logo_2.jpg" alt="" class="title-logo" />
-        <h2 class="big-sub">圧倒的な変化と感動を。</h2>
+        <h2 class="big-sub">{{catchCopy}}</h2>
       </div>
       <div>
         <h3>
@@ -14,23 +14,17 @@
         </h3>
       </div>
       <div>
-        <h2 class="comp-name">Cross Condition</h2>
+        <h2 class="comp-name">{{companyName}}</h2>
       </div>
       <div class="display-circle">
-        <div class="circle">
-          <p class="circle-inner">いつでも解約OK!</p>
-        </div>
-        <div class="circle">
-          <p class="circle-inner">24時間予約OK!</p>
-        </div>
-        <div class="circle">
-          <p class="circle-inner">シューズ無料レンタル</p>
+        <div class="circle" v-for="item in circleItems" :key="item.name ">
+          <p class="circle-inner">{{item.name}}</p>
         </div>
       </div>
     </div>
     <div class="sample_box12">
       <div class="sample_box12_tape"></div>
-      <p class="sample_box12_title">OPEN記念キャンペーン</p>
+      <p class="sample_box12_title">{{news}}</p>
       <p>ストレッチor体幹トレーニングor両方選べる</p>
       <div class="price">
         <div class="price-element-1">初回価格60分<br />7500円</div>
@@ -41,32 +35,16 @@
     <div class="wrap">
       <h3>こんな悩みありませんか？</h3>
       <ul class="worry-example">
-        <div class="worry-element">
+        <div class="worry-element" v-for="item in worryItems" :key="item.id">
           <img src="@/img/check.png" alt="" class="worry-check">
-          <p>最近運動不足で体が重い</p>
-        </div>
-        <div class="worry-element">
-          <img src="@/img/check.png" alt="" class="worry-check">
-          <p>食事制限しているけど痩せられない</p>
-        </div>
-        <div class="worry-element">
-          <img src="@/img/check.png" alt="" class="worry-check">
-          <p>筋力トレーニングが続けられない</p>
+          <p>{{item.name}}</p>
         </div>
       </ul>
-      <div class="worry-solution">
-        <div class="solution-name">ストレッチ</div>
-        <img src="@/img/stretch.jpeg" alt="" class="solution-img" />
+      <div v-for="item in solutionItems" :key="item.id" class="worry-solution">
+        <div class="solution-name">{{item.name}}</div>
+        <img :src="item.img" alt="" class="solution-img" />
         <p class="solution-detail">
-          ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。
-        </p>
-      </div>
-      <div class="plus">➕</div>
-      <div class="worry-solution">
-        <div class="solution-name">コンディショニング</div>
-        <img src="@/img/conditioning.jpeg" alt="" class="solution-img" />
-        <p class="solution-detail">
-          ストレッチを通してあなたの運動不足を解消します。トレーナーが１対１で指導し、あなたに最適な解消方法を提案します。
+          {{item.discription}}
         </p>
       </div>
     </div>
@@ -76,8 +54,7 @@
         <p class="player-discription">廣田智哉</p>
         <img src="@/img/player_1.jpeg" alt="" class="player" />
         <div class="discription">
-          はじめまして！Cross Conditionの代表取締役の廣田です！Cross
-          Conditionでは、ストレッチを中心として体を整える施術をおこなっています！運動が苦手な方、運動が続かない方でも楽しくトレーニングを続けられます。
+          {{ceoStatement}}
         </div>
       </div>
     </div>
@@ -109,45 +86,12 @@
           <th>100分</th>
         </tr>
         <tr class="tr-head">
-          <td>¥5,000</td>
-          <td class="popular">¥18,000</td>
-          <td>¥24,000</td>
-          <td>¥30,500</td>
+          <td v-for="item in threeTickets" :key="item.id">{{item.name}}</td>
         </tr>
         <tr>
-          <td class="sale">¥4,500お得</td>
-          <td class="sale">¥4,500お得</td>
-          <td class="sale">¥6,000お得</td>
-          <td class="sale">¥7,500お得</td>
+          <td v-for="item in threeTickets" :key="item.id" class="sale">{{item.sale}}</td>
         </tr>
       </table>
-      <!-- <h3>コース紹介</h3>
-      <swiper :options="swiperOption" class="swiper">
-        <swiper-slide
-          ><p>ストレッチ</p>
-          <img src="@/img/test.jpeg" alt="" class="img" />
-          <p class="course-detail">
-            ストレッチに特化した施術を行い柔軟性と身体の強化を行います
-          </p></swiper-slide
-        >
-        <swiper-slide
-          ><p>コンディショニング</p>
-          <img src="@/img/test.jpeg" alt="" class="img" />
-          <p>
-            コンディショニングを通してあなたの体の悩みを解決します
-          </p></swiper-slide
-        >
-        <swiper-slide
-          ><p>コンディショニング</p>
-          <img src="@/img/test.jpeg" alt="" class="img" />
-          <p>
-            コンディショニングを通してあなたの体の悩みを解決します
-          </p></swiper-slide
-        >
-        <div slot="pagination" class="swiper-pagination"></div>
-        <div slot="button-prev" class="swiper-button-prev"></div>
-        <div slot="button-next" class="swiper-button-next"></div>
-      </swiper> -->
     </div>
     <div class="wrap-2">
       <h3>予約・お問い合わせ</h3>
@@ -163,23 +107,65 @@ export default {
   name: "toppage",
   data() {
     return {
-      swiperOption: {
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
+      catchCopy: '圧倒的な変化と感動を。',
+      companyName: 'Cross Condition',
+      circleItems: [
+        {name: '手ぶらOK'},
+        {name: '服貸し出し無料'},
+        {name: '無料カウンセリング'}
+      ],
+      news: "OPEN記念キャンペーン",
+      worryItems: [
+        {
+          id: 1,
+          name: '最近運動不足で体が重い',
         },
-        slidesPerView: 1.2,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        {
+          id: 2,
+          name: '食事制限しているけど痩せられない',
         },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        {
+          id: 3,
+          name: '筋力トレーニングが続けられない',
         },
-        spaceBetween: 5,
-      },
+      ],
+      ceoStatement: 'はじめまして！Cross Conditionの代表取締役の廣田です！CrossConditionでは、ストレッチを中心として体を整える施術をおこなっています！運動が苦手な方、運動が続かない方でも楽しくトレーニングを続けられます。',
+      threeTickets: [
+        {
+          id: 1,
+          name: '¥5,000',
+          sale: '¥4,500お得',
+        },
+        {
+          id: 2,
+          name: '¥18,000',
+          sale: '¥4,500お得',
+        },
+        {
+          id: 3,
+          name: '¥24,000',
+          sale: '¥6,000お得',
+        },
+        {
+          id: 4,
+          name: '¥30,500',
+          sale: '¥7,500お得',
+        },
+      ],
+      solutionItems: [
+        {
+          id: 1,
+          name: 'ストレッチ',
+          img: require('@/img/stretch.jpeg'),
+          discription: 'ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。',
+        },
+        {
+          id: 2,
+          name: 'コンディショニング',
+          img: require('@/img/conditioning.jpeg'),
+          discription: 'ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。'
+        }
+      ]
     };
   },
   methods: {
@@ -421,6 +407,7 @@ export default {
       }
       th:nth-child(1) {
         background-color: #60c2a2;
+        color: white;
       }
       th:nth-child(3) {
         background-color: #60c2a2;
@@ -432,6 +419,7 @@ export default {
       }
       tr:nth-child(2) td {
         font-size: 20px;
+        color: white;
       }
       td {
         text-align: center;
@@ -469,6 +457,7 @@ export default {
       }
       th.not-no1 {
         background-color: #60c2a2;
+        color: white;
       }
       td.sale {
         color: red;
