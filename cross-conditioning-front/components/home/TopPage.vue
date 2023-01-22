@@ -337,6 +337,7 @@ export default {
       text-align: left;
       padding: 10px;
       .example-icon {
+        font-size: 20px;
         padding-right: 10px;
       }
     }
