@@ -1,10 +1,12 @@
 <template>
-  <div class="content">
-    <div class="header">
-      <Header />
-    </div>
-    <div class="title">
-      <TopPage />
+  <div class="base">
+    <div class="content">
+      <div class="header">
+        <Header />
+      </div>
+      <div class="title">
+        <TopPage />
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +31,15 @@ export default {
   }
   .title {
     width: 100%;
+  }
+}
+@media all and (min-width: 768px) {
+  .base {
+    background-color: #60c2a2;
+    .content {
+      width: 85%;
+      margin: auto;
+    }
   }
 }
 </style>

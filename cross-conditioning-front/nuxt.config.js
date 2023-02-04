@@ -4,14 +4,12 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'cross-conditioning-front',
-    htmlAttrs: {
-      lang: 'en'
-    },
+    title: 'Cross Conditionで圧倒的な変化を',
+    htmlAttrs: { lang: 'ja' },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'ストレッチ×コンディショニングで圧倒的な変化を一緒に創造しませんか？Cross Conditionに週に１回通うだけで、体に変化が生まれます。激しい運動が苦手、日々のデスクワークで腰が痛い、といった悩みを持つ方におすすめです。' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

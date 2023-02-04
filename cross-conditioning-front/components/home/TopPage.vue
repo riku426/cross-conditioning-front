@@ -14,7 +14,7 @@
         </h3>
       </div>
       <div>
-        <h2 class="comp-name">{{ companyName }}</h2>
+        <h1 class="comp-name">{{ companyName }}</h1>
       </div>
       <div class="display-circle">
         <div class="circle" v-for="item in circleItems" :key="item.name">
@@ -22,14 +22,31 @@
         </div>
       </div>
     </div>
-    <div class="sample_box12">
-      <div class="sample_box12_tape"></div>
-      <p class="sample_box12_title">{{ news }}</p>
-      <p>ストレッチor体幹トレーニングor両方選べる</p>
-      <div class="price">
-        <div class="price-element-1">初回価格60分<br />7500円</div>
-        <p class="price-arrow">→</p>
-        <div class="price-element-2">特別価格60分<br />3500円</div>
+    <div class="campaign-box">
+      <div class="sample_box12">
+        <div class="sample_box12_tape"></div>
+        <p class="sample_box12_title">{{ news }}</p>
+        <p>ストレッチor体幹トレーニングor両方選べる</p>
+        <div class="price">
+          <div class="price-element-1">初回価格60分<br />7500円</div>
+          <p class="price-arrow">→</p>
+          <div class="price-element-2">特別価格60分<br />3500円</div>
+        </div>
+      </div>
+      <div class="sample_box12">
+        <div class="sample_box12_tape"></div>
+        <p class="sample_box12_title">{{ news2 }}</p>
+        <p>ご紹介した方にもされた方にも特典あり!</p>
+        <div class="flex-box">
+          <div class="introducer">
+            <p>ご紹介者様</p>
+            <div>60分無料</div>
+          </div>
+          <div class="friend">
+            <p>お友達</p>
+            <div>初回無料</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="wrap">
@@ -63,7 +80,7 @@
       <div class="player-container">
         <div>
           <p class="player-discription">廣田智哉</p>
-          <img src="@/img/player_1.jpeg" alt="" class="player" />
+          <img src="@/img/player_1.jpg" alt="" class="player" />
         </div>
         <div class="discription">
           {{ ceoStatement }}
@@ -115,11 +132,10 @@
       <h3>予約・お問い合わせ</h3>
       <div class="offer-container">
         <div class="offer-method">
-          <h4>電話番号：</h4>
-          <p>080-2470-9958</p>
+          <p>電話番号：080-2470-9958</p>
         </div>
         <div class="offer-method">
-          <h4>公式LINE：</h4>
+          <p>公式LINE：</p>
           <img src="@/img/line.png" alt="" class="line" />
         </div>
       </div>
@@ -128,11 +144,34 @@
       <h3>アクセス</h3>
       <div class="offer-container">
         <div class="offer-method">
-          <h4>
+          <p>
             住所： 〒670-0962<br />
             兵庫県姫路市南駅前町75イルソーレ南駅前301号室
-          </h4>
-          <h4>最寄駅：姫路駅から徒歩５分</h4>
+          </p>
+          <p>最寄駅：姫路駅から徒歩５分</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrap-2">
+      <h3>お客さまの声</h3>
+      <div v-for="review in reviews" :key="review.id" class="customer-review">
+        <div>
+          <p>{{ review.name }}</p>
+          <img
+            v-if="review.gender === 0"
+            src="@/img/man.svg"
+            alt=""
+            class="customer-img"
+          />
+          <img
+            v-if="review.gender === 1"
+            src="@/img/woman.svg"
+            alt=""
+            class="customer-img"
+          />
+        </div>
+        <div class="balloon3-left">
+          {{ review.review }}
         </div>
       </div>
     </div>
@@ -152,6 +191,7 @@ export default {
         { name: "無料カウンセリング" },
       ],
       news: "OPEN記念キャンペーン",
+      news2: "友達紹介キャンペーン",
       worryItems: [
         {
           id: 1,
@@ -206,6 +246,22 @@ export default {
             "ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。",
         },
       ],
+      reviews: [
+        {
+          id: 1,
+          gender: 0,
+          name: "35歳・男性",
+          review:
+            "創業当初から毎週通っています。代表の廣田さんが本当に親身に相談に乗ってくださり、毎週快適な時間を過ごせています！",
+        },
+        {
+          id: 2,
+          gender: 1,
+          name: "28歳・女性",
+          review:
+            "最初は不安でしたが、女性でも安心して通うことができます！最高です！",
+        },
+      ],
     };
   },
   methods: {
@@ -232,16 +288,17 @@ export default {
   background-color: #f3e8d7;
   color: #0c3b48;
   .title {
-    padding: 0.5em 1em;
+    padding: 0.5em 0.5em;
     background: #f3e8d7; /*背景色*/
     z-index: 1;
     text-align: left;
     width: auto;
     height: 550px;
-    background-image: url("@/img/top_page_2.png");
+    background-image: url("@/img/top.png");
+    background-position: right;
+    background-size: 60%;
     background-position: center;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.5);
     .title-logo {
       margin-top: 50px;
       width: 47%;
@@ -323,6 +380,24 @@ export default {
       margin: 0;
       padding: 0;
       font-size: 0.8em;
+    }
+    .flex-box {
+      display: flex;
+      margin-top: 30px;
+      .introducer {
+        margin: auto;
+        border: solid 1px black;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(251, 234, 144, 0.5);
+      }
+      .friend {
+        margin: auto;
+        border: solid 1px black;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(251, 234, 144, 0.5);
+      }
     }
   }
   .sample_box12_tape {
@@ -517,6 +592,36 @@ export default {
         }
       }
     }
+    .customer-review {
+      margin: 10px;
+      display: flex;
+      text-align: center;
+      .customer-img {
+        margin-right: 10px;
+        width: 100px;
+      }
+      .balloon3-left {
+        position: relative;
+        display: inline-block;
+        margin: 20px;
+        padding: 20px 15px;
+        text-align: center;
+        font-weight: bold;
+        background: white;
+        border-radius: 30%;
+        box-sizing: border-box;
+      }
+      .balloon3-left:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        margin-top: -15px;
+        border: 15px solid transparent;
+        border-right: 15px solid white;
+        z-index: 0;
+      }
+    }
   }
   // .wrap-2 {
   //   margin-top: 50px;
@@ -585,12 +690,15 @@ export default {
 
 @media all and (min-width: 768px) {
   .container {
-    margin: 0 50px;
+    margin: 0px;
     font-size: 35px;
     .title {
       height: 1200px;
+      background-position: right;
+      background-size: 80%;
+      background-repeat: no-repeat;
       .title-logo {
-        width: 40%;
+        width: 45%;
       }
       .big-sub {
         display: block;
@@ -609,7 +717,7 @@ export default {
       }
       .comp-name {
         font-size: 50px;
-        width: 30%;
+        width: 40%;
         margin: 50px 150px;
       }
       .display-circle {
@@ -620,6 +728,7 @@ export default {
           width: 200px;
           height: 200px;
           background-color: #f8f3ea;
+          background-size: 50%;
           border-radius: 50%;
           margin: 0 auto;
           text-align: center;
@@ -646,8 +755,17 @@ export default {
         }
       }
     }
-    .sample_box12 {
-      width: 50%;
+    .campaign-box {
+      display: flex;
+      .sample_box12 {
+        width: 40%;
+        .sample_box12_title {
+          font-size: 35px !important;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
     }
     .wrap {
       margin-left: 50px;
@@ -693,6 +811,22 @@ export default {
         width: 70%;
         .course {
           font-size: 30px;
+        }
+      }
+      .offer-container {
+        .offer-method {
+          .line {
+            width: 30%;
+          }
+        }
+      }
+      .customer-review {
+        font-size: 20px;
+        .balloon3-left {
+          margin: 50px 160px;
+          padding: 30px;
+          font-size: 22px;
+          height: 100%;
         }
       }
     }
