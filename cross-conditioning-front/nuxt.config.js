@@ -10,7 +10,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'ストレッチ×コンディショニングで圧倒的な変化を一緒に創造しませんか？Cross Conditionに週に１回通うだけで、体に変化が生まれます。激しい運動が苦手、日々のデスクワークで腰が痛い、といった悩みを持つ方におすすめです。' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'google-site-verification', content: 'hoonHRUJ6meM3EZ70jSNvaSunUDW0_UR2zeCQYTQDe8'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
