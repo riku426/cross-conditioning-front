@@ -113,9 +113,8 @@
           ３回券
         </caption>
         <tr class="tr-element">
-          <th>40分</th>
           <th class="not-no1">60分</th>
-          <th>80分</th>
+          <th class="not-no1">80分</th>
           <th>100分</th>
         </tr>
         <tr class="tr-head">
@@ -209,11 +208,6 @@ export default {
       ceoStatement:
         "こんにちは、代表の廣田です。運動しにくい環境で腰痛や肩こりに悩まされている方が多いと思います。ストレッチと体幹トレーニングで一緒に日常生活の辛さを、一緒に変えていきましょう！",
       threeTickets: [
-        {
-          id: 1,
-          name: "¥5,000",
-          sale: "¥4,500お得",
-        },
         {
           id: 2,
           name: "¥18,000",
@@ -528,16 +522,17 @@ export default {
         background-color: #60c2a2;
         color: white;
       }
+      tr:nth-child(2) td {
+        font-size: 20px;
+        background-color: #60c2a2;
+        color: white;
+      }
       th:nth-child(3) {
         background-color: #60c2a2;
         color: white;
       }
       th:nth-child(4) {
         background-color: #60c2a2;
-        color: white;
-      }
-      tr:nth-child(2) td {
-        font-size: 20px;
         color: white;
       }
       td {
