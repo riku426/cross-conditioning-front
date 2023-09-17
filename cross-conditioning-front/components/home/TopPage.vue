@@ -588,6 +588,15 @@ export default {
         .line {
           width: 100%;
         }
+        .link {
+          text-decoration: none;
+        }
+        .link:hover {
+          color: #60c2a2;
+        }
+        .link:active {
+          color: #60c2a2;
+        }
       }
     }
     .customer-review {
