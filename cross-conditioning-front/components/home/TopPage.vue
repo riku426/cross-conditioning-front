@@ -131,7 +131,7 @@
       <h3>予約・お問い合わせ</h3>
       <div class="offer-container">
         <div class="offer-method">
-          <a href="https://beauty.hotpepper.jp/kr/slnH000657082/">ホットペッパービューティー</a>
+          <a href="https://beauty.hotpepper.jp/kr/slnH000657082/" class="link">ホットペッパービューティー</a>
         </div>
         <div class="offer-method">
           <p>電話番号：080-2470-9958</p>
@@ -815,6 +815,15 @@ export default {
         .offer-method {
           .line {
             width: 30%;
+          }
+          .link {
+            text-decoration: none;
+          }
+          .link:hover {
+            color: #60c2a2;
+          }
+          .link:active {
+            color: #60c2a2;
           }
         }
       }
