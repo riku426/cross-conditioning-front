@@ -80,7 +80,7 @@
       <div class="player-container">
         <div>
           <p class="player-discription">廣田智哉</p>
-          <img src="@/img/player_1.jpg" alt="" class="player" />
+          <img src="@/img/player_1_new.jpg" alt="" class="player" />
         </div>
         <div class="discription">
           {{ ceoStatement }}
@@ -231,14 +231,14 @@ export default {
         {
           id: 1,
           name: "ストレッチ",
-          img: require("@/img/stretch.jpeg"),
+          img: require("@/img/stretch.jpg"),
           discription:
             "ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。",
         },
         {
           id: 2,
           name: "コンディショニング",
-          img: require("@/img/conditioning.jpeg"),
+          img: require("@/img/conditioning.jpg"),
           discription:
             "ストレッチを通してあなたの運動不足を解消します。トレーナーが1対1で指導し、あなたに最適な解消方法を提案します。",
         },
@@ -291,7 +291,7 @@ export default {
     text-align: left;
     width: auto;
     height: 550px;
-    background-image: url("@/img/top.png");
+    background-image: url("@/img/top_new.png");
     background-position: right;
     background-size: 60%;
     background-position: center;
